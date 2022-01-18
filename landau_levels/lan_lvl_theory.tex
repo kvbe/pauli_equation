@@ -1,0 +1,770 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[
+	left=1cm,right=1cm,top=1cm,bottom=2cm,
+    papersize={250mm,350mm}
+]{geometry}
+
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{dsfont}
+
+\usepackage[squaren]{SIunits}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\newcommand{\mi}{\mathrm{i}}
+\newcommand{\suml}{\sum\limits}
+\newcommand{\prodl}{\prod\limits}
+\newcommand{\intl}{\int\limits}
+
+
+\begin{document}
+
+\begin{align}
+    \vb{E}
+    &=
+    -2\phi_0 x\vb{e}_x
+\\
+    \phi
+    &=
+    -
+    \vb{r}
+    \cdot
+    \intl_0^1
+    \dd{u}
+    \vb{E}(u\vb{r},t)
+    =
+    2\phi_0
+    x^2
+    \intl_0^1
+    \dd{u}
+    u
+    =
+    \phi_0
+    x^2
+\end{align}
+
+
+\begin{align}
+    \vb{B}
+    &=
+    B{e}_z
+\\
+    \vb{A}
+    &=
+    -
+    \vb{r}
+    \times
+    \intl_0^1
+    \dd{u}
+    u
+    \vb{B}(u\vb{r},t)
+    =
+    \frac{B}{2}
+    \pmqty{
+        -y\\x\\0
+    }
+\end{align}
+
+\begin{align}
+    \vb{A}
+    &\to
+    \vb{A}
+    +
+    \nabla
+    \Lambda
+    =
+    B
+    \pmqty{
+        0\\x\\0
+    }
+\\
+    \Lambda
+    &=
+    \frac{B}{2}
+    xy
+\\
+    \phi^\prime
+    &\to
+    \phi-\partial_t \Lambda=\phi
+\end{align}
+
+\begin{align}
+    \hat{H}
+    &=
+    \frac{1}{2m}
+    (\hat{p}_x^2+\hat{p}_z^2)
+    +
+    \frac{1}{2m}
+    (\hat{p}_y-qB\hat{x})^2
+    +
+    \phi_0
+    \hat{x}^2
+\\
+    &=
+    \frac{1}{2m}
+    (\hat{p}_x^2+\hat{p}_y^2+\hat{p}_z^2)
+    -
+    \frac{qB}{m}
+    \hat{x}
+    \hat{p}_y
+    +
+    \pqty{
+	    \frac{q^2B^2}{2m}
+	    +
+    		\phi_0
+    	}
+    \hat{x}^2
+\end{align}
+
+
+\begin{align}
+    \bqty{
+        \hat{H}
+        ,
+        \hat{p}_z
+    }
+    &=
+    \bqty{
+        \hat{H}
+        ,
+        \hat{p}_y
+    }
+    =
+    0
+\\
+    \hat{p}_z
+    &\to
+    p_z
+    ,\quad
+    \hat{p}_y
+    \to
+    p_y
+    ,\quad
+    \hat{p}_x
+    \to
+    -\mi\hbar\partial_x
+\\
+    \psi(x,y,z)
+    &=
+    e^{
+        \frac{\mi}{\hbar}
+        (yp_y+zp_z)
+    }
+    \chi(x)
+\end{align}
+
+
+$\omega_c=\sqrt{\frac{q^2 B^2}{m^2}+2\frac{\phi_0}{m}}$
+
+
+
+\begin{align}
+	\hat{H}    
+    &=
+    \frac{p_y^2+p_z^2}{2m}
+	-
+    \frac{\hbar^2}{2m}    
+    \partial_x^2
+    -
+    \frac{qBp_y}{m}
+    x
+    +
+    \frac{1}{2}
+    m\omega_c^2
+    x^2
+\\
+	&=
+    \frac{p_y^2+p_z^2}{2m}
+	-
+    \frac{\hbar^2}{2m}    
+    \partial_x^2
+	+
+    \frac{1}{2}
+    m\omega_c^2
+	\pqty{
+		x
+		-
+		\frac{qBp_y}{m^2\omega_c^2}
+	}^2
+	-
+	\frac{q^2 B^2 p_y^2}{2m^3\omega_c^2}
+\end{align}
+
+$\xi = x-x_0=x-\frac{qBp_y}{m^2\omega_c^2}$, $C=\frac{q^2 B^2 p_y^2}{2m^3\omega_c^2}$
+
+\begin{align}
+	\hat{H}
+	&=
+    \frac{p_y^2+p_z^2}{2m}
+	-
+	C
+	-
+    \frac{\hbar^2}{2m}    
+    \partial_\xi^2
+	+
+	\frac{1}{2}
+	m
+	\omega_c^2
+	\xi^2
+\\
+	\hat{H}_1
+	&=	
+	\hat{H}-\hat{H}_0
+	=
+	-
+    \frac{\hbar^2}{2m}    
+    \partial_\xi^2
+	+
+	\frac{1}{2}
+	m
+	\omega_c^2
+	\xi^2
+\end{align}
+
+
+\begin{align}
+	E_1
+	\chi(\xi)
+	&=
+	\hat{H}_1
+	\chi(\xi)
+\\
+	\chi_n(\xi)
+	&=
+	N_n
+	e^{-\frac{m\omega_c}{2\hbar}\xi^2}
+	H_n\pqty{
+		\sqrt{
+			\frac{m\omega_c}{\hbar}	
+		}
+		\xi
+	}
+\end{align}
+
+$N_n=\frac{1}{\sqrt{2^n n!}}\pqty{\frac{m\omega_c}{\pi\hbar}}^{\frac{1}{4}}$
+
+\begin{align}
+	\psi_{n,p_y,p_z}
+	&=
+	e^{\frac{\mi}{\hbar}(yp_y+zp_z-Ct)}
+	\chi_{n,p_y}
+	(x-x_0)
+\\
+	\chi_{n,p_y}
+	(x-x_0)
+	&=
+	N_n
+	\exp
+	\pqty{
+		-
+		\frac{m\omega_c}{2\hbar}
+		\pqty{
+			x-\frac{qBp_y}{m^2\omega_c^2}		
+		}^2
+	}
+	H_n\pqty{
+		\sqrt{
+			\frac{m\omega_c}{\hbar}	
+		}
+		\pqty{
+			x-\frac{qBp_y}{m^2\omega_c^2}		
+		}
+	}
+\end{align}
+
+\begin{align}
+	\psi_{0,p_y,p_z}
+	(x,y,z)
+	&=
+	\pqty{
+		\frac{m\omega_c}{\pi\hbar}
+	}^{\frac{1}{4}}
+	\exp
+	\pqty{
+		-
+		\frac{m\omega_c}{2\hbar}
+		\pqty{
+			x-\frac{qBp_y}{m^2\omega_c^2}
+		}^2
+		+
+		\frac{\mi}{\hbar}
+		p_y y
+		+
+		\frac{\mi}{\hbar}
+		p_z z
+		-
+		\frac{\mi}{\hbar}
+		Ct
+	}
+\\
+	\abs{
+		\psi_{0,p_y,p_z}
+		(x,y,z)
+	}^2
+	&=
+	\sqrt{
+		\frac{m\omega_c}{\pi\hbar}
+	}
+	\exp
+	\pqty{
+		-
+		\frac{m\omega_c}{\hbar}
+		\pqty{
+			x-\frac{qBp_y}{m^2\omega_c^2}
+		}^2
+	}	
+\end{align}
+
+
+\begin{align}
+	E
+	&=
+	E_0
+	+
+	E_1^{(n)}
+	=
+    \frac{p_y^2+p_z^2}{2m}
+	-
+	C
+	+
+	\hbar\omega_c
+	(n+\frac{1}{2})
+\\
+	&=
+    \frac{p_y^2+p_z^2}{2m}
+	-
+	\frac{q^2 B^2 p_y^2}
+	{
+		2m^3
+		\pqty{\frac{q^2 B^2}{m^2}+2\frac{\phi_0}{m}}
+	}
+	+
+	\hbar
+	\sqrt{\frac{q^2 B^2}{m^2}+2\frac{\phi_0}{m}}
+	\pqty{n+\frac{1}{2}}
+\end{align}
+
+
+\begin{align}
+	\vb{A}^\prime
+	&=
+	\vb{A}
+	+
+	\nabla\Lambda
+	=
+	B\pmqty{0\\x\\0}
+	-
+	B\pmqty{0\\x_1\\0}
+\\
+	\Lambda
+	&=
+	-Bx_1 y
+\\
+	\phi^\prime
+	&=
+	\phi
+	-
+	\partial_t
+	\Lambda
+	=
+	\phi
+\end{align}
+
+
+\begin{align}
+    \hat{H}^\prime
+    &=
+    \frac{1}{2m}
+    (\hat{p}_x^2+\hat{p}_z^2)
+    +
+    \frac{1}{2m}
+    (\hat{p}_y-qB\hat{x}+qBx_1)^2
+    +
+    \phi_0
+    \hat{x}^2
+\\
+    &=
+    \frac{1}{2m}
+    (\hat{p}_x^2+\hat{p}_y^2+\hat{p}_z^2)
+    -
+    \pqty{
+	    \frac{qB}{m}
+    		\hat{p}_y
+    		+
+	    \frac{q^2B^2}{m}
+    		x_1
+    }
+	\hat{x}
+    +
+    \pqty{
+	    \frac{q^2B^2}{2m}
+	    +
+    		\phi_0
+    	}
+    \hat{x}^2
+    +
+    \frac{qB}{m}
+    \hat{p}_y
+    x_1
+    +
+    \frac{q^2B^2}{2m}
+    x_1^2
+\end{align}
+
+$\omega_c=\sqrt{\frac{q^2 B^2}{m^2}+2\frac{\phi_0}{m}}$
+
+\begin{align}
+	\hat{H}^\prime  
+    &=
+    \frac{p_y^2+p_z^2}{2m}
+	-
+    \frac{\hbar^2}{2m}    
+    \partial_x^2
+    -
+    \pqty{
+	    \frac{qB}{m}
+    		p_y
+    		+
+	    \frac{q^2B^2}{m}
+    		x_1
+    }
+    x
+    +
+    \frac{1}{2}
+    m\omega_c^2
+    x^2
+    +
+    \frac{qB}{m}
+    p_y
+    x_1
+    +
+    \frac{q^2B^2}{2m}
+    x_1^2
+\\
+	&=
+    \frac{p_y^2+p_z^2}{2m}
+	-
+    \frac{\hbar^2}{2m}    
+    \partial_x^2
+	+
+    \frac{1}{2}
+    m\omega_c^2
+	\pqty{
+		x
+		-
+		\frac{qBp_y}{m^2\omega_c^2}
+		-
+		\frac{q^2 B^2}{m^2\omega_c^2}
+		x_1
+	}^2
+	-
+	\frac{qBp_y}{2m^2\omega_c^2}
+	-
+	\frac{q^2 B^2}{2m^2\omega_c^2}x_1
+    +
+    \frac{qB}{m}
+    p_y
+    x_1
+    +
+    \frac{q^2B^2}{2m}
+    x_1^2
+\end{align}
+
+$\zeta = x-x_0^\prime=x-\frac{qBp_y}{m^2\omega_c^2}-\frac{q^2 B^2}{m^2\omega_c^2}x_1$,
+$C^\prime=\frac{qBp_y}{2m^2\omega_c^2}+\frac{q^2 B^2}{2m^2\omega_c^2}x_1-\frac{qB}{m}p_y x_1-\frac{q^2B^2}{2m}x_1^2$
+
+\begin{align}
+	\hat{H}^\prime
+	&=
+    \frac{p_y^2+p_z^2}{2m}
+	-
+	C^\prime
+	-
+    \frac{\hbar^2}{2m}    
+    \partial_\zeta^2
+	+
+	\frac{1}{2}
+	m
+	\omega_c^2
+	\zeta^2
+\\
+	\hat{H}_1
+	&=	
+	\hat{H}-\hat{H}_0
+	=
+	-
+    \frac{\hbar^2}{2m}    
+    \partial_\zeta^2
+	+
+	\frac{1}{2}
+	m
+	\omega_c^2
+	\zeta^2
+\end{align}
+
+$N_n=\frac{1}{\sqrt{2^n n!}}\pqty{\frac{m\omega_c}{\pi\hbar}}^{\frac{1}{4}}$
+
+\begin{align}
+	\psi^\prime_{n,p_y,p_z}
+	&=
+	e^{\frac{\mi}{\hbar}(yp_y+zp_z-C^\prime t)}
+	\chi^\prime_{n,p_y}
+	(x-x_0^\prime)
+\\
+	\chi^\prime_{n,p_y}
+	(x-x_0^\prime)
+	&=
+	N_n
+	\exp
+	\pqty{
+		-
+		\frac{m\omega_c}{2\hbar}
+		\pqty{
+			x-\frac{qBp_y}{m^2\omega_c^2}-\frac{q^2 B^2}{m^2\omega_c^2}x_1
+		}^2
+	}
+	H_n\pqty{
+		\sqrt{
+			\frac{m\omega_c}{\hbar}	
+		}
+		\pqty{
+			x-\frac{qBp_y}{m^2\omega_c^2}-\frac{q^2 B^2}{m^2\omega_c^2}x_1
+		}
+	}
+\end{align}
+
+\begin{align}
+	\psi^\prime_{0,p_y,p_z}
+	(x,y,z)
+	&=
+	\pqty{
+		\frac{m\omega_c}{\pi\hbar}
+	}^{\frac{1}{4}}
+	\exp
+	\pqty{
+		-
+		\frac{m\omega_c}{2\hbar}
+		\pqty{
+			x-\frac{qBp_y}{m^2\omega_c^2}-\frac{q^2 B^2}{m^2\omega_c^2}x_1
+		}^2
+		+
+		\frac{\mi}{\hbar}
+		p_y y
+		+
+		\frac{\mi}{\hbar}
+		p_z z
+		-
+		\frac{\mi}{\hbar}
+		C^\prime t
+	}
+\\
+	\abs{
+		\psi^\prime_{0,p_y,p_z}
+		(x,y,z)
+	}^2
+	&=
+	\sqrt{
+		\frac{m\omega_c}{\pi\hbar}
+	}
+	\exp
+	\pqty{
+		-
+		\frac{m\omega_c}{\hbar}
+		\pqty{
+			x
+			-\frac{qBp_y}{m^2\omega_c^2}
+			-\frac{q^2 B^2}{m^2\omega_c^2}x_1
+		}^2
+	}
+	\neq
+	\abs{
+		\psi_{0,p_y,p_z}
+		(x,y,z)
+	}^2
+\\
+	p_y
+	&\neq
+	p_y^\prime
+\end{align}
+
+\newpage
+
+\begin{align}
+    \vb{E}
+    &=
+    -2\phi_{0x} x\vb{e}_x
+    -2\phi_{0y} y\vb{e}_y
+\\
+    \phi
+    &=
+    -
+    \vb{r}
+    \cdot
+    \intl_0^1
+    \dd{u}
+    \vb{E}(u\vb{r},t)
+    =
+    2
+    (
+    		\phi_{0x}
+    		x^2
+    		+
+    		\phi_{0y}
+    		y^2
+    	)
+    \intl_0^1
+    \dd{u}
+    u
+    =
+    	\phi_{0x}
+    	x^2
+    	+
+    	\phi_{0y}
+    	y^2
+\end{align}
+
+
+\begin{align}
+    \vb{B}
+    &=
+    B{e}_z
+\\
+    \vb{A}
+    &=
+    -
+    \vb{r}
+    \times
+    \intl_0^1
+    \dd{u}
+    u
+    \vb{B}(u\vb{r},t)
+    =
+    \frac{B}{2}
+    \pmqty{
+        -y\\x\\0
+    }
+\end{align}
+
+\begin{align}
+    \vb{A}
+    &\to
+    \vb{A}
+    +
+    \nabla
+    \Lambda
+    =
+    B
+    \pmqty{
+        0\\x\\0
+    }
+\\
+    \Lambda
+    &=
+    \frac{B}{2}
+    xy
+\\
+    \phi^\prime
+    &\to
+    \phi-\partial_t \Lambda=\phi
+\end{align}
+
+\begin{align}
+    \hat{H}
+    &=
+    \frac{1}{2m}
+    (\hat{p}_x^2+\hat{p}_z^2)
+    +
+    \frac{1}{2m}
+    (\hat{p}_y-qB\hat{x})^2
+    +
+    \phi_{0x}
+    \hat{x}^2
+    +
+    \phi_{0y}
+    \hat{y}^2
+\\
+    &=
+    \frac{1}{2m}
+    (\hat{p}_x^2+\hat{p}_y^2+\hat{p}_z^2)
+    -
+    \frac{qB}{m}
+    \hat{x}
+    \hat{p}_y
+    +
+    \pqty{
+	    \frac{q^2B^2}{2m}
+	    +
+    		\phi_{0x}
+    	}
+    \hat{x}^2
+    +
+    \phi_{0y}
+    \hat{y}^2
+\end{align}
+
+
+\begin{align}
+    \bqty{
+        \hat{H}
+        ,
+        \hat{p}_z
+    }
+    &=
+    0
+\\
+    \hat{p}_z
+    &\to
+    p_z
+    ,\quad
+    \hat{p}_y
+    \to
+    -\mi\hbar\partial_y
+    ,\quad
+    \hat{p}_x
+    \to
+    -\mi\hbar\partial_x
+\\
+    \psi(x,y,z)
+    &=
+    e^{
+        \frac{\mi}{\hbar}
+        zp_z
+    }
+    \chi(x,y)
+\end{align}
+
+$\omega_c=\sqrt{\frac{q^2 B^2}{m^2}+2\frac{\phi_{0x}}{m}}$
+
+
+
+\begin{align}
+	\hat{H}    
+    &=
+    \frac{p_z^2}{2m}
+    	-
+    \frac{\hbar^2}{2m}    
+    \partial_y^2
+    +
+    \phi_{0y}
+    y^2
+	-
+    \frac{\hbar^2}{2m}    
+    \partial_x^2
+    -
+    \frac{qB}{m}
+    x
+    \partial_y
+    +
+    \frac{1}{2}
+    m\omega_c^2
+    x^2
+\end{align}
+
+\end{document} 
